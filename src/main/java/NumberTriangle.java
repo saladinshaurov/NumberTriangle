@@ -96,9 +96,9 @@ public class NumberTriangle {
         }
         else {
             if (path.charAt(0) == 'r') {
-                return right.retrieve(path.substring(1, path.length() - 1));
+                return right.retrieve(path.substring(1));
             } else if (path.charAt(0) == 'l') {
-                return left.retrieve(path.substring(1, path.length() - 1));
+                return left.retrieve(path.substring(1));
             }
         }
         return -1;
@@ -120,7 +120,6 @@ public class NumberTriangle {
         // are more convenient to work with when reading the file contents.
         InputStream inputStream = NumberTriangle.class.getClassLoader().getResourceAsStream(fname);
         BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
-
 
         // TODO define any variables that you want to use to store things
         // will need to return the top of the NumberTriangle,
